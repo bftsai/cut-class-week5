@@ -505,7 +505,8 @@ $utilities: map-merge(
       values: (monospace: var(--#{$prefix}font-monospace))
     ),
     "font-size": (
-      rfs: true,
+      responsive: ture, //customer
+      rfs: false,
       property: font-size,
       class: fs,
       values: $font-sizes
