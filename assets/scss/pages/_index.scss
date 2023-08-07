@@ -1,0 +1,74 @@
+.index{
+    .nav-link:hover{
+        color: $success;
+    }
+    .material-symbols-outlined{
+        font-weight: bold;
+        font-variation-settings: 
+        'FILL' 1;
+    }
+    select:hover{
+        cursor: pointer;
+    }
+    .nav{
+        position: fixed;
+        min-width: 296px;
+        min-height: 100vh; //view height
+        .nav-link:focus{
+            border-left: 4px solid $success;
+            padding-left: 28px !important;
+            color: $success;
+        }
+        .material-symbols-outlined:focus{
+            color: $success;
+        }
+    }
+    .personal{
+        img{
+            // display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        p{
+            color: $gray-600;
+        }
+    }
+    .main{
+        margin-left: 308px;
+        select{
+            width: 134px;
+            font-weight: bold;
+        }
+    }
+    .header{
+        a{
+            height: 24px;
+        }
+    }
+    .content{
+        select{
+            width: 74px;
+            margin-bottom: 6px;
+        }
+    }
+    .faqList{
+        width: 34.8584%;
+    }
+    .list-group{
+        width: 100%;
+        border-radius: 2px;
+    }
+    .list-group-item{
+        border-color: #CED4DA;
+    }
+    .faqDetail{
+        width: 63.6166%;
+    }
+    .card-header{
+        .material-symbols-outlined {
+            top: 20px;
+            right: 17px;
+        }
+    }
+}
