@@ -1,4 +1,7 @@
 .index{
+    .logo{
+        width: 151px;
+    }
     .nav-link:hover{
         color: $success;
     }
@@ -76,7 +79,7 @@
             top: 20px;
             right: 17px;
         }
-        .dropdown{
+        .dropstart{
             top: 20px;
             right: 17px;
         }
@@ -120,10 +123,20 @@
     .bottom.hidden{
         display: none;
     }
-    .hidden{
+    .own.hidden{
         display: none;
     }
-    .show{
+    .replyForm.show{
         display: block;
+    }
+    .replyForm{
+        .p-1{
+            height: 34px;
+        }
+        textarea{
+            resize: none;
+            width: 100%;
+            height: 180px;
+        }
     }
 }

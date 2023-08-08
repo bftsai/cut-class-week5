@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +21,7 @@
       <ul class="nav flex-column bg-light py-8">
         <li class="nav-item mb-8">
           <a class="nav-link d-flex align-items-center text-dark ps-8" aria-current="page" href="index.html">
-            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/053bcf3afe88348b79971d2ea8de28f179cba5c5/week5/logo-ANSWER.svg" alt="logo pic">
+            <img class="logo" src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/053bcf3afe88348b79971d2ea8de28f179cba5c5/week5/logo-ANSWER.svg" alt="logo pic">
           </a>
         </li>
         <li class="nav-item mb-5">
@@ -218,7 +220,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-12">
+                  <div class="col-12 own">
                     <div class="card border-0">
                       <div class="card-body d-flex pb-0">
                         <div class="flex-shrink-0">
@@ -254,6 +256,69 @@
                       </div>
                     </div>
                   </div>
+                  <div class="col-12 replyForm d-none">
+                    <div class="card border-0">
+                      <div class="card-header py-4 d-flex align-items-center justify-content-between pe-14">
+                        <div class="dropdown">
+                          <a class="btn btn-light dropdown-toggle text-dark fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Body Text
+                          </a>
+                        
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </div>
+                        <button type="button" class="btn p-1" data-bs-toggle="button">
+                          <span class="material-symbols-outlined">
+                            format_bold
+                          </span>
+                        </button>
+                        <button type="button" class="btn p-1" data-bs-toggle="button">
+                          <span class="material-symbols-outlined">
+                            format_italic
+                          </span>
+                        </button>
+                        <button type="button" class="btn p-1" data-bs-toggle="button">
+                          <span class="material-symbols-outlined">
+                            format_list_bulleted
+                          </span>
+                        </button>
+                        <button type="button" class="btn p-1" data-bs-toggle="button">
+                          <span class="material-symbols-outlined">
+                            format_list_numbered
+                          </span>
+                        </button>
+                        <button type="button" class="btn p-1" data-bs-toggle="button">
+                          <span class="material-symbols-outlined">
+                            image
+                          </span>
+                        </button>
+                        <button type="button" class="btn p-1" data-bs-toggle="button">
+                          <span class="material-symbols-outlined">
+                            link
+                          </span>
+                        </button>
+                        <button type="button" class="btn p-1" data-bs-toggle="button">
+                          <span class="material-symbols-outlined">
+                            code
+                          </span>
+                        </button>
+                      </div>
+                      <div class="card-body px-6 d-flex flex-column">
+                        <textarea class="border-0" placeholder="Reply an answer..." name="suggest" id=""></textarea>
+                        <div class="group ms-auto">
+                          <button type="button" class="btn btn-outline-success fw-bold py-2 px-8 cancel">
+                            Cancel
+                          </button>
+                          <button type="button" class="btn btn-success fw-bold ms-2 py-2 px-8 suggestReply">
+                            Reply
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="bottom mt-4 d-flex align-items-center">
@@ -275,8 +340,8 @@
                     </li>
                   </ul>
                 </nav>
-                <button class="btn btn-outline-success ms-auto py-2 px-8">Mark as read</button>
-                <button class="btn btn-success ms-6 py-2 px-8 reply">Reply</button>
+                <button class="btn btn-outline-success fw-bold ms-auto py-2 px-8">Mark as read</button>
+                <button class="btn btn-success fw-bold ms-6 py-2 px-8 reply">Reply</button>
               </div>
             </div>
           </div>
