@@ -65,10 +65,65 @@
     .faqDetail{
         width: 63.6166%;
     }
+    .container-fluid{
+        border-radius: 2px;
+    }
+    .row{
+        padding-bottom: 6px;
+    }
     .card-header{
         .material-symbols-outlined {
             top: 20px;
             right: 17px;
         }
+        .dropdown{
+            top: 20px;
+            right: 17px;
+        }
+    }
+    .flex-shrink-0{
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+        }
+    }
+    .flex-grow-1{
+        button{
+            border-radius: 2px;
+            margin-bottom: 16.5px;
+        }
+        .material-symbols-outlined{
+            font-weight: normal;
+        }
+        .material-symbols-outlined.star{
+            font-variation-settings:
+            'FILL' 0;
+        }
+        p{
+            a{
+                height: 24px;
+            }
+        }
+        .text-success{
+            font-family: 'Roboto mono';
+            background-color: $green-100;
+            
+        }
+    }
+    .page-link{
+        height: 24px;
+        .material-symbols-outlined:hover{
+            color: $success;
+        }
+    }
+    .bottom.hidden{
+        display: none;
+    }
+    .hidden{
+        display: none;
+    }
+    .show{
+        display: block;
     }
 }

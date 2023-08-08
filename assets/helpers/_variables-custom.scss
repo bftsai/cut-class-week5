@@ -374,7 +374,7 @@ $escaped-characters: (
 $enable-caret:                true !default;
 $enable-rounded:              true !default;
 $enable-shadows:              false !default;
-$enable-gradients:            false !default;
+$enable-gradients:            true !default;
 $enable-transitions:          true !default;
 $enable-reduced-motion:       true !default;
 $enable-smooth-scroll:        true !default;
@@ -513,9 +513,9 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 962px,//customer 960px,
+  sm: 140px,
+  md: 436px,
+  lg: 660px,//customer 960px,
   xl: 948px,//customer 1140px,
   xxl: 1068px,//customer 1320px
 ) !default;
@@ -1759,3 +1759,11 @@ $kbd-bg:                            var(--#{$prefix}body-color) !default;
 $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, removing in v6
 
 $pre-color:                         null !default;
+
+
+//customer
+body{
+  a{
+    text-decoration: none;
+  }
+}
