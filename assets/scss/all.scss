@@ -56,3 +56,11 @@
 
 
 @import './pages/index.scss';
+@import './pages/admin.scss';
+
+
+.main{
+    .header,.content,.footer{
+        padding-left: 308px;
+    }
+}

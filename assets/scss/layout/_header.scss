@@ -1,0 +1,42 @@
+
+.logo{
+    width: 151px;
+}
+.nav-link:hover{
+    color: $success;
+}
+.material-symbols-outlined{
+    font-weight: bold;
+    font-variation-settings: 
+    'FILL' 1;
+}
+select:hover{
+    cursor: pointer;
+}
+.nav{
+    position: fixed;
+    min-width: 296px;
+    min-height: 100vh; //view height
+    .nav-link:focus{
+        color: $success;
+    }
+}
+.focus{
+    border-left: 4px solid $success;
+    padding-left: 28px !important;
+    color: $success;
+    .material-symbols-outlined{
+        color: $success;
+    }
+}
+.personal{
+    img{
+        // display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    p{
+        color: $gray-600;
+    }
+}

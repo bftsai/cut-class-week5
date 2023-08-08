@@ -1,0 +1,28 @@
+.admin{
+    thead{
+        .material-symbols-outlined{
+            font-size: 18px;
+        }
+        th{
+            padding-top: 4.5px;
+            padding-bottom: 4.5px;
+        }
+    }
+    tbody{
+        .material-symbols-outlined:hover{
+            cursor: pointer;
+        }
+    }
+    table{
+        margin-bottom: 63px;
+    }
+    .footer{
+        a{
+            padding: 3px 11.5px;
+        }
+        .back,.next{
+            height: 32px;
+            padding: 3px;
+        }
+    }
+}
