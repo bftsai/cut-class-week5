@@ -11,6 +11,7 @@
     tbody{
         .material-symbols-outlined:hover{
             cursor: pointer;
+            color: $success;
         }
     }
     table{
@@ -20,9 +21,51 @@
         a{
             padding: 3px 11.5px;
         }
-        .back,.next{
-            height: 32px;
-            padding: 3px;
+    }
+    .back,.next{
+        height: 32px;
+        padding: 3px;
+        &:hover{
+            .material-symbols-outlined{
+                color: #FFFFFF;
+            }
+        }
+    }
+    .modal{
+        .pic{
+            width: 141px;
+            height: 141px;
+            background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week5/emir.jpeg?raw=true) center center no-repeat;
+            background-size: cover;
+        }
+        .profile{
+            width: 57.834101%;
+        }
+        .modal-dialog{
+            width: 480px;
+        }
+        .modal-footer{
+            .btn{
+                margin: 0;
+            }
+            .btn-success{
+                margin-left: 16px;
+            }
+        }
+    }
+    .item1Deg0{
+        transition: all 0.5s;
+        &.deg180{
+            transform: rotate(180deg);
+        }
+    }
+    .btn{
+        border-radius: 2px;
+    }
+    form{
+        .material-symbols-outlined:hover{
+            color: inherit;
+            cursor: inherit;
         }
     }
 }

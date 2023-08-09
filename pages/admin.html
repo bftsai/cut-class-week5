@@ -21,25 +21,98 @@
         <div class="admin main">
             <div class="header py-7 bg-light">
                 <div class="container d-flex align-items-center">
-                    <h1 class="fs-4 fw-bold">Admin</h1>
-                <span class="material-symbols-outlined">
-                    add
-                </span>
-                <a href="#" class="ms-auto">
-                <span class="material-symbols-outlined text-dark">
-                    search
-                </span>
-                </a>
-                <a href="#" class="ms-6">
-                <span class="material-symbols-outlined text-dark">
-                    notifications_active
-                </span>
-                </a>
+                    <h1 class="fs-4 fw-bold me-12">Admin</h1>
+                    <a href="#" class="addNew d-flex align-items-center text-dark ms-2" data-bs-toggle="modal" data-bs-target="#admin">
+                        <span class="material-symbols-outlined">
+                            add
+                        </span>
+                        Add New Admin 
+                    </a>
+                    <!-- admin modal -->
+                    <div class="modal fade h-50" tabindex="-1" id="admin" data-bs-backdrop="static" data-bs-keyboard="false">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                          <div class="modal-content">
+                            <div class="modal-header p-8 border-0">
+                              <h5 class="modal-title fs-4 text-dark fw-bold">New Admin</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body py-0 px-8">
+                                <form action="admin.html" class="d-flex flex-column">
+                                    <p class="fs-5 text-dark fw-bold mb-4">Account</p>
+                                    <label for="name" class="fs-7 mb-1">Name</label>
+                                    <input type="text" class="mb-4 w-100" id="name" name="name">
+                                    <label for="mail" class="fs-7 mb-1">Email</label>
+                                    <input type="text" class="mb-6 w-100" id="mail" name="mail">
+                                    <p class="fs-5 fw-bold text-dark pt-6 border-top border-light400 mb-4">Verification</p>
+                                    <p class="fw-bold  d-flex align-items-center mb-5">
+                                        <span class="material-symbols-outlined text-danger me-2">
+                                            warning
+                                        </span>
+                                        Unverified
+                                    </p>
+                                    <button class="btn btn-outline-success text-success fw-bold py-4 mb-4">Send Verification Mail</button>
+                                    <p class="fs-5 fw-bold text-dark pt-6 border-top border-light400 mb-4">Access Level</p>
+                                    <select class="form-select p-4 text-light600 mb-6" aria-label="Default select example">
+                                        <option selected>-Choose access level-</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                      <p class="fs-5 fw-bold text-dark pt-6 border-top border-light400 mb-4">Custom Access</p>
+                                      <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="Lecture">
+                                        <label class="form-check-label text-dark" for="Lecture">
+                                            Lecture
+                                        </label>
+                                      </div>
+                                      <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="Coupon">
+                                        <label class="form-check-label text-dark" for="Coupon">
+                                            Coupon
+                                        </label>
+                                      </div>
+                                      <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="Message">
+                                        <label class="form-check-label text-dark" for="Message">
+                                            Message
+                                        </label>
+                                      </div>
+                                      <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="Setting">
+                                        <label class="form-check-label text-dark" for="Setting">
+                                            Setting
+                                        </label>
+                                      </div>
+                                      <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" value="" id="TaskMenu">
+                                        <label class="form-check-label text-dark" for="TaskMenu">
+                                            Task Menu
+                                        </label>
+                                      </div>
+                                      <div class="btn-group pb-4 mt-8">
+                                        <button type="button" class="btn btn-outline-success py-2 px-8 ms-auto" data-bs-dismiss="modal">Cancel</button>
+                                        <input type="submit" class="btn btn-success py-2 px-8 ms-4" value="Add">
+                                      </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <a href="#" class="ms-auto">
+                        <span class="material-symbols-outlined text-dark">
+                            search
+                        </span>
+                    </a>
+                    <a href="#" class="ms-6">
+                        <span class="material-symbols-outlined text-dark">
+                            notifications_active
+                        </span>
+                    </a>
                 </div>
             </div>
             <div class="content pt-4">
                 <div class="container">
-                    <table class="table">
+                    <table class="table table-hover">
                         <thead>
                           <tr>
                             <th scope="col" class="border-dark d-flex align-items-center">
@@ -57,146 +130,264 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td scope="row" class="border-light400 text-dark">#1</td>
-                            <td class="border-light400">Emir Wicks</td>
-                            <td class="border-light400">emir.wicks@mail.com</td>
-                            <td class="border-light400">Yes</td>
-                            <td colspan="2" class="text-end border-light400">
-                                <span class="material-symbols-outlined ms-auto">
-                                    visibility
-                                </span>
-                                <span class="material-symbols-outlined ms-6">
-                                    edit
-                                </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="border-light400">#2</td>
-                            <td class="border-light400">Zaina Goldsmith</td>
-                            <td class="border-light400">zaina.goldsmith@mail.com</td>
-                            <td class="border-light400">Yes</td>
-                            <td colspan="2" class="text-end border-light400">
-                                <span class="material-symbols-outlined ms-auto">
-                                    visibility
-                                </span>
-                                <span class="material-symbols-outlined ms-6">
-                                    edit
-                                </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="border-light400">#3</td>
-                            <td class="border-light400">Mahima Lopez</td>
-                            <td class="border-light400">mahima.lopez@mail.com</td>
-                            <td class="border-light400">Yes</td>
-                            <td colspan="2" class="text-end border-light400">
-                                <span class="material-symbols-outlined ms-auto">
-                                    visibility
-                                </span>
-                                <span class="material-symbols-outlined ms-6">
-                                    edit
-                                </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="border-light400">#4</td>
-                            <td class="border-light400">Pharrell Murray</td>
-                            <td class="border-light400">pharrell.murray@mail.com</td>
-                            <td class="border-light400">Yes</td>
-                            <td colspan="2" class="text-end border-light400">
-                                <span class="material-symbols-outlined ms-auto">
-                                    visibility
-                                </span>
-                                <span class="material-symbols-outlined ms-6">
-                                    edit
-                                </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="border-light400">#5</td>
-                            <td class="border-light400">Annika Mcbride</td>
-                            <td class="border-light400">annika.mcbride@mail.com</td>
-                            <td class="border-light400">Yes</td>
-                            <td colspan="2" class="text-end border-light400">
-                                <span class="material-symbols-outlined ms-auto">
-                                    visibility
-                                </span>
-                                <span class="material-symbols-outlined ms-6">
-                                    edit
-                                </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="border-light400">#6</td>
-                            <td class="border-light400">Fatimah Clark</td>
-                            <td class="border-light400">fatimah.clark@mail.com</td>
-                            <td class="border-light400">Yes</td>
-                            <td colspan="2" class="text-end border-light400">
-                                <span class="material-symbols-outlined ms-auto">
-                                    visibility
-                                </span>
-                                <span class="material-symbols-outlined ms-6">
-                                    edit
-                                </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="border-light400">#7</td>
-                            <td class="border-light400">Klaudia Rhodes</td>
-                            <td class="border-light400">klaudia.rhodes@mail.com</td>
-                            <td class="border-light400">Yes</td>
-                            <td colspan="2" class="text-end border-light400">
-                                <span class="material-symbols-outlined ms-auto">
-                                    visibility
-                                </span>
-                                <span class="material-symbols-outlined ms-6">
-                                    edit
-                                </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="border-light400">#8</td>
-                            <td class="border-light400">Tillie Lucero</td>
-                            <td class="border-light400">tillie.lucero@mail.com</td>
-                            <td class="border-light400">Yes</td>
-                            <td colspan="2" class="text-end border-light400">
-                                <span class="material-symbols-outlined ms-auto">
-                                    visibility
-                                </span>
-                                <span class="material-symbols-outlined ms-6">
-                                    edit
-                                </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="border-light400">#9</td>
-                            <td class="border-light400">Sabrina Stephenson</td>
-                            <td class="border-light400">sabrina.stephenson@mail.com</td>
-                            <td class="border-light400">Yes</td>
-                            <td colspan="2" class="text-end border-light400">
-                                <span class="material-symbols-outlined ms-auto">
-                                    visibility
-                                </span>
-                                <span class="material-symbols-outlined ms-6">
-                                    edit
-                                </span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td scope="row" class="border-light400">#10</td>
-                            <td class="border-light400">Annie Smith</td>
-                            <td class="border-light400">annie.smith@mail.com</td>
-                            <td class="border-light400">Yes</td>
-                            <td colspan="2" class="text-end border-light400">
-                                <span class="material-symbols-outlined ms-auto">
-                                    visibility
-                                </span>
-                                <span class="material-symbols-outlined ms-6">
-                                    edit
-                                </span>
-                            </td>
-                          </tr>
+                            <tr class="id1">
+                                <td scope="row" class="border-light400 text-dark">#1</td>
+                                <td class="border-light400">Emir Wicks</td>
+                                <td class="border-light400">emir.wicks@mail.com</td>
+                                <td class="border-light400">Yes</td>
+                                <td colspan="2" class="text-end border-light400">
+                                    <span class="material-symbols-outlined ms-auto preview1" data-bs-toggle="modal" data-bs-target="#preview1">
+                                        visibility
+                                    </span>
+                                    <span class="material-symbols-outlined ms-6 edit1" data-bs-toggle="modal" data-bs-target="#edit">
+                                        edit
+                                    </span>
+                                    <!-- preview Modal -->
+                                    <div class="modal fade" id="preview1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content rounded-0 p-8">
+                                            <div class="modal-body d-flex justify-content-between p-0">
+                                                <div class="pic">
+
+                                                </div>
+                                            <div class="profile text-start">
+                                                <p class="text-dark mb-1 d-flex justify-content-between align-items-start">
+                                                    #1
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </p>
+                                                <p class="text-dark">Admin</p>
+                                                <p class="fs-4 text-dark fw-bold mb-2">
+                                                    Emir Wicks
+                                                </p>
+                                                <p class="fs-7 text-light600 mb-5">emir.wicks@mail.com</p>
+                                                <p class="d-flex justify-content-between align-items-center verified1"  data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                                    <a class="fs-7 text-dark bg-light">
+                                                        Verified
+                                                    </a>
+                                                    <span class="material-symbols-outlined item1Deg0">
+                                                        expand_more
+                                                    </span>
+                                                  </p>
+                                            </div>
+                                            </div>
+                                            <div class="modal-footer collapse border-0 pt-9 pb-0 px-0" id="collapse1">
+                                            <button type="button" class="btn btn-outline-danger py-2 px-8" data-bs-dismiss="modal">Deactivate</button>
+                                            <button type="button" class="btn btn-success py-2 px-8">Edit</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <!-- edit modal -->
+                                    <div class="modal fade h-50 text-start" tabindex="-1" id="edit" data-bs-backdrop="static" data-bs-keyboard="false">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header p-8 border-0">
+                                            <h5 class="modal-title fs-4 text-dark fw-bold">Edit Admin</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body py-0 px-8">
+                                                <form action="admin.html" class="d-flex flex-column">
+                                                    <p class="fs-5 text-dark fw-bold mb-4">Account</p>
+                                                    <label for="name" class="fs-7 mb-1">Name</label>
+                                                    <input type="text" class="mb-4 w-100" id="name" name="name" placeholder="Emir Wicks">
+                                                    <label for="mail" class="fs-7 mb-1">Email</label>
+                                                    <input type="text" class="mb-6 w-100" id="mail" name="mail" placeholder="emir.wicks@mail.com">
+                                                    <p class="fs-5 fw-bold text-dark pt-6 border-top border-light400 mb-4">Verification</p>
+                                                    <p class="fw-bold  d-flex align-items-center mb-5">
+                                                        <span class="material-symbols-outlined text-success me-2">
+                                                            check_circle
+                                                        </span>
+                                                        Verified
+                                                        <span class="fs-7 text-dark ms-auto">2020/4/12</span>
+                                                    </p>
+                                                    <button class="btn btn-outline-light400 text-light400 fw-bold py-4 mb-4" disabled>Send Verification Mail</button>
+                                                    <p class="fs-5 fw-bold text-dark pt-6 border-top border-light400 mb-4">Access Level</p>
+                                                    <select class="form-select p-4 text-dark mb-6" aria-label="Default select example">
+                                                        <option>-Choose access level-</option>
+                                                        <option value="1" selected>Admin</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                    <p class="fs-5 fw-bold text-dark pt-6 border-top border-light400 mb-4">Custom Access</p>
+                                                    <div class="form-check mb-4">
+                                                        <input class="form-check-input" type="checkbox" value="" id="Lecture">
+                                                        <label class="form-check-label text-dark" for="Lecture">
+                                                            Lecture
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mb-4">
+                                                        <input class="form-check-input" type="checkbox" value="" id="Coupon">
+                                                        <label class="form-check-label text-dark" for="Coupon">
+                                                            Coupon
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mb-4">
+                                                        <input class="form-check-input" type="checkbox" value="" id="Message">
+                                                        <label class="form-check-label text-dark" for="Message">
+                                                            Message
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mb-4">
+                                                        <input class="form-check-input" type="checkbox" value="" id="Setting">
+                                                        <label class="form-check-label text-dark" for="Setting">
+                                                            Setting
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mb-4">
+                                                        <input class="form-check-input" type="checkbox" value="" id="TaskMenu">
+                                                        <label class="form-check-label text-dark" for="TaskMenu">
+                                                            Task Menu
+                                                        </label>
+                                                    </div>
+                                                    <p class="fs-5 fw-bold text-dark pt-6 border-top border-light400 mb-4">
+                                                        Deactivate Account
+                                                    </p>
+                                                    <p class="text-danger d-flex align-items-center mb-4">
+                                                        <span class="material-symbols-outlined me-2">
+                                                            warning
+                                                        </span>
+                                                        This cannot be undone!
+                                                    </p>
+                                                    <button class="btn btn-outline-danger text-danger fw-bold py-4">
+                                                        Deactivate This Account
+                                                    </button>
+                                                    <div class="btn-group pb-4 mt-12">
+                                                        <button type="button" class="btn btn-outline-success py-2 px-8 ms-auto" data-bs-dismiss="modal">Cancel</button>
+                                                        <input type="submit" class="btn btn-success py-2 px-8 ms-4" value="Add">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="id2">
+                                <td scope="row" class="border-light400">#2</td>
+                                <td class="border-light400">Zaina Goldsmith</td>
+                                <td class="border-light400">zaina.goldsmith@mail.com</td>
+                                <td class="border-light400">Yes</td>
+                                <td colspan="2" class="text-end border-light400">
+                                    <span class="material-symbols-outlined ms-auto preview2">
+                                        visibility
+                                    </span>
+                                    <span class="material-symbols-outlined ms-6 edit2">
+                                        edit
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="id3">
+                                <td scope="row" class="border-light400">#3</td>
+                                <td class="border-light400">Mahima Lopez</td>
+                                <td class="border-light400">mahima.lopez@mail.com</td>
+                                <td class="border-light400">Yes</td>
+                                <td colspan="2" class="text-end border-light400">
+                                    <span class="material-symbols-outlined ms-auto preview3">
+                                        visibility
+                                    </span>
+                                    <span class="material-symbols-outlined ms-6 edit3">
+                                        edit
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="id4">
+                                <td scope="row" class="border-light400">#4</td>
+                                <td class="border-light400">Pharrell Murray</td>
+                                <td class="border-light400">pharrell.murray@mail.com</td>
+                                <td class="border-light400">Yes</td>
+                                <td colspan="2" class="text-end border-light400">
+                                    <span class="material-symbols-outlined ms-auto preview4">
+                                        visibility
+                                    </span>
+                                    <span class="material-symbols-outlined ms-6 edit4">
+                                        edit
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="id5">
+                                <td scope="row" class="border-light400">#5</td>
+                                <td class="border-light400">Annika Mcbride</td>
+                                <td class="border-light400">annika.mcbride@mail.com</td>
+                                <td class="border-light400">Yes</td>
+                                <td colspan="2" class="text-end border-light400">
+                                    <span class="material-symbols-outlined ms-auto preview5">
+                                        visibility
+                                    </span>
+                                    <span class="material-symbols-outlined ms-6 edit5">
+                                        edit
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="id6">
+                                <td scope="row" class="border-light400">#6</td>
+                                <td class="border-light400">Fatimah Clark</td>
+                                <td class="border-light400">fatimah.clark@mail.com</td>
+                                <td class="border-light400">Yes</td>
+                                <td colspan="2" class="text-end border-light400">
+                                    <span class="material-symbols-outlined ms-auto preview6">
+                                        visibility
+                                    </span>
+                                    <span class="material-symbols-outlined ms-6 edit6">
+                                        edit
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="id7">
+                                <td scope="row" class="border-light400">#7</td>
+                                <td class="border-light400">Klaudia Rhodes</td>
+                                <td class="border-light400">klaudia.rhodes@mail.com</td>
+                                <td class="border-light400">Yes</td>
+                                <td colspan="2" class="text-end border-light400">
+                                    <span class="material-symbols-outlined ms-auto preview7">
+                                        visibility
+                                    </span>
+                                    <span class="material-symbols-outlined ms-6 edit7">
+                                        edit
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="id8">
+                                <td scope="row" class="border-light400">#8</td>
+                                <td class="border-light400">Tillie Lucero</td>
+                                <td class="border-light400">tillie.lucero@mail.com</td>
+                                <td class="border-light400">Yes</td>
+                                <td colspan="2" class="text-end border-light400">
+                                    <span class="material-symbols-outlined ms-auto preview8">
+                                        visibility
+                                    </span>
+                                    <span class="material-symbols-outlined ms-6 edit8">
+                                        edit
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="id9">
+                                <td scope="row" class="border-light400">#9</td>
+                                <td class="border-light400">Sabrina Stephenson</td>
+                                <td class="border-light400">sabrina.stephenson@mail.com</td>
+                                <td class="border-light400">Yes</td>
+                                <td colspan="2" class="text-end border-light400">
+                                    <span class="material-symbols-outlined ms-auto preview9">
+                                        visibility
+                                    </span>
+                                    <span class="material-symbols-outlined ms-6 edit9">
+                                        edit
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="id10">
+                                <td scope="row" class="border-light400">#10</td>
+                                <td class="border-light400">Annie Smith</td>
+                                <td class="border-light400">annie.smith@mail.com</td>
+                                <td class="border-light400">Yes</td>
+                                <td colspan="2" class="text-end border-light400">
+                                    <span class="material-symbols-outlined ms-auto preview10">
+                                        visibility
+                                    </span>
+                                    <span class="material-symbols-outlined ms-6 edit10">
+                                        edit
+                                    </span>
+                                </td>
+                            </tr>
                         </tbody>
                       </table>
                 </div>
@@ -228,8 +419,6 @@
             </div>
         </div>
     </div>
-
-
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
